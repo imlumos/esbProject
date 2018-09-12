@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/rest" name="LocalTest" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST GET" uri-template="/apiCenter/{content}">
+        <inSequence>
+            <property expression="json-eval($.description)" name="Content" scope="default" type="STRING"/>
+            <log level="custom">
+                <property expression="fn:concat('Routing to ', get-property('Content'))" name="message"/>
+            </log>
+            <send>
+                <endpoint key="LocalTestEndpoint"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>
