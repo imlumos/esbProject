@@ -20,4 +20,10 @@
     <artifact name="LocalTestEndpoint" groupId="com.example.HttpServices.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/endpoints/LocalTestEndpoint.xml</file>
     </artifact>
+    <artifact name="ChannelingFeeEP" groupId="com.example.HttpServices.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ChannelingFeeEP.xml</file>
+    </artifact>
+    <artifact name="SettlePaymentEP" groupId="com.example.HttpServices.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/SettlePaymentEP.xml</file>
+    </artifact>
 </artifacts>
